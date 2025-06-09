@@ -1,0 +1,22 @@
+{
+  "states": ["q0", "q1", "q2"],
+  "input_alphabet": ["0", "1"],
+  "stack_alphabet": ["A", "Z"],
+  "transitions": [
+    {
+      "current_state": "q0", "input": "", "stack_top": "Z",
+      "next_state": "q2", "push_symbols": "Z"
+    },
+    {
+      "current_state": "q0", "input": "0", "stack_top": "Z",
+      "next_state": "q0", "push_symbols": "AZ"
+    },
+    {"current_state": "q0", "input": "0", "stack_top": "A", "next_state": "q0", "push_symbols": "AA"},
+    {"current_state": "q0", "input": "1", "stack_top": "A", "next_state": "q1", "push_symbols": ""},
+    {"current_state": "q1", "input": "1", "stack_top": "A", "next_state": "q1", "push_symbols": ""},
+    {"current_state": "q1", "input": "", "stack_top": "Z", "next_state": "q2", "push_symbols": ""}
+  ],
+  "start_state": "q0",
+  "start_stack_symbol": "Z",
+  "final_states": ["q2"]
+}
